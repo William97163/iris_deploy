@@ -11,7 +11,9 @@ model = IrisModel()
 #    JSON data and return the predicted flower species with the confidence
 @app.get('/')
 def get_message():
-    return "Hello, stranger, from GitHub actions"
+    return {
+        'message' : "Hello, stranger, from GitHub actions"
+        }
 
 
 @app.post('/predict')
